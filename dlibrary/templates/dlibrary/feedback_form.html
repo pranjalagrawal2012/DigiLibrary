@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="container-fluid py-5 bg-dark">
+    <div class="row">
+        <div class="col-sm-4">
+            <p class="text-white"><strong>Admin: </strong>Pranjal Agrawal</p>
+            <p class="text-white"><strong>Email: </strong>pranjalagrawal2012@gmail.com</p>
+            <p class="text-white"><strong>Phone: </strong>9148387001</p>
+            <p class="text-white"><strong>Motto: </strong>stay foolish stay hungry</p>
+        </div>
+        <div class="col-sm-8">
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14870.20537939078!2d81.7115648!3d21.28922!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe17216e27f00ee1c!2sSapphire+Greens!5e0!3m2!1sen!2sin!4v1563777500130!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    </div>
+<div class="container">
+<h4 class="text-center font-weight-bold mt-5" style="font-family: 'Raleway', sans-serif">
+    If you have any query or want to give us feedback, fill the form below
+</h4>
+<form method="post" action="" enctype="multipart/form-data">{% csrf_token %}
+    <div class="row">
+        <div class="col-sm">
+            <div class="form-group required">
+                <label class="required font-weight-bold" for="id_name">Name</label>
+                <input class="form-control required" type="text" name="name" id="id_name" maxlength="100" >
+            </div>
+            <div class="form-group required">
+                <label class="required font-weight-bold" for="id_email">E-mail</label>
+                <input class="form-control required" type="email" name="email" id="id_email" maxlength="100" >
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold" for="id_mobno">Mobile Number</label>
+                <input class="form-control required" type="number" name="mobno" id="id_mobno">
+            </div>
+            <div class="form-group">
+                <label class="font-weight-bold" for="id_subject">Subject</label>
+                <input type="text" name="subject" id="id_subject" class="form-control required" maxlength="100">
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="form-group">
+                <label class="font-weight-bold" for="id_message">Your Message</label>
+{#                <input class="form-control required" type="text" name="message" id="id_message">#}
+                <textarea class="form-control required" name="message" id="id_message" rows="12"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+</div>
+{% endblock %}
